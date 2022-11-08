@@ -1,0 +1,42 @@
+.sobre__nosotros{
+    display: flex;
+    margin: 50px auto;
+    margin-top: 65px;
+    margin-bottom: 65px;
+    width: 85%;
+    gap: 25px;
+    border: 1px solid $maincolor;
+    border-radius: 10px;
+    padding: 40px;
+    .parte__izquierda{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        h2{
+            color: $maincolor;
+            font-family: $fontAlfa;
+            margin-bottom: 50px;
+        }
+        h4{
+            color: $secondarycolor2;
+            font-family: $fontBebas;
+        }
+        p{
+            color: $secondarycolor2;
+            display: flex;
+            text-align: center;
+            .texto1__sobrenosotros{
+                margin-bottom: 50px;
+            }
+        }
+    }
+    .parte__derecha{
+        width: 50%;
+    }
+    
+}
+
+
+

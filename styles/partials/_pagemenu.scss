@@ -1,0 +1,240 @@
+.reservacion{
+    padding: 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    .reservacion__heading{
+        h5{
+            font-family: $fontBebas;
+            font-weight: 300;
+            font-size: 1.6rem;
+            color: rgb(92, 91, 91);
+            letter-spacing: 1px;
+            text-align: center;
+        }
+        h4{
+            font-family: $fontAlfa;
+            font-size: 2rem;
+            color: $maincolor;
+        }
+    }
+    .reservacion__form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            "nombre            email"
+            "dia               hora"
+            "cant_personas     buttom"
+        ;
+        width: 36rem;
+        gap: 1rem;
+        input{
+            padding: 0.75rem 1rem;
+            font-family: $fontBebas;
+            font-weight: 300;
+            color: $secondarycolor;
+        }
+        .nombre{
+            grid-area: nombre;
+        }
+        .email{
+            grid-area: email;
+        }
+        .dia{
+            grid-area: dia;
+        }
+        .hora{
+            grid-area: hora;
+        }
+        .cant_personas{
+            grid-area: cant_personas;
+        }
+        .buttom{
+            grid-area: buttom;
+            border: 0;
+            background-color: $maincolor;
+            font-family: $fontAlfa;
+            text-transform: uppercase;
+            color: $secondarycolor;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+    }
+}
+
+.grid{
+    padding: 6rem;
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "item1  item2"
+        "item1  item3";
+    gap: 2rem;
+    .grid__item{
+        border-radius: 1rem;
+        border: 1px solid $maincolor;
+        background-size: cover;
+        background-position: center center;
+        color: white;
+        font-family: $fontBebas;
+        padding: 2rem;
+        h5{
+            font-family: $fontBebas;
+            font-size: 1.2rem;
+            background-color: rgba(0, 0, 0, .4);
+            width: max-content;
+            padding: 3px;
+            color: $maincolor;
+            border-radius: 5px;
+        }
+        h4{
+            font-family: $fontBebas;
+            font-size: 1.6rem;
+            background-color: rgba(0, 0, 0, .4);
+            width: max-content;
+            padding: 4px;
+            padding-bottom: 0.5px;
+            border-radius: 5px;
+        }
+    }
+    .grid__item1{
+        grid-area: item1;
+        background-image: url("../Imagenes/Menufoto1.jpg");
+        height: 400px;
+    }
+    .grid__item2{
+        grid-area: item2;
+        background-image: url("../Imagenes/Menufoto2.jpg");
+    }
+    .grid__item3{
+        grid-area: item3;
+        background-image: url("../Imagenes/Menufoto3.jpg");
+    }
+}
+
+.elige{
+    padding: 6rem;
+    padding-top: 0.5rem;
+    padding-bottom: 3rem;
+    .titlemenu{
+        text-align: center;
+        padding-inline: 8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        h4{
+            font-family: $fontBebas;
+            font-weight: 300;
+            background-color: $maincolor;
+            padding: .5rem 1rem .25rem 1rem;
+        }
+        h2{
+            font-family: $fontAlfa;
+            color: white;
+        }
+        p{
+            font-family: $fontLato;
+            color: white;
+        }
+    }
+    .titlemenuhamburguesas{
+        h4{
+            font-family: $fontBebas;
+            font-weight: 300;
+            background-color: $maincolor;
+            padding: .25rem .5rem .125rem .5rem;
+            width: 100%;
+            margin-top: 2rem;
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+    }
+    .cards{
+        display: flex;
+        gap: 1rem;
+        margin-top: 0.5rem;
+        margin-bottom: 2.5rem; 
+        .card{
+            flex: 4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            background-color: $secondarycolor;
+            border: 1px solid $maincolor;
+            img{
+                max-width: 100%;
+                padding: 20px;
+            }
+            h4{
+                font-family: $fontBebas;
+                font-weight: 300;
+                font-size: 1.5rem;
+                color: $maincolor;
+            }
+            p{
+                font-family: $fontLato;
+                width: 75%;
+                text-align: center;
+                color: azure;
+            }
+            a{
+                font-family: $fontAlfa;
+                font-size: 1rem;
+                padding: 0.5rem;
+                text-decoration: none;
+                color: $maincolor;
+            }
+        }
+    }
+
+}
+
+.events{
+    padding: 6rem;
+    padding-top: 0;
+    background-color: black;
+    .in{
+        display: flex;
+        border: 1px solid $maincolor;
+        border-radius: 10px;
+        box-shadow: 15px 15px 30px rgb(102, 102, 102);
+        .in__right{
+            min-width: 0;
+            padding: 1rem;
+            img{
+                max-width: 100%;
+                border-radius: 5px;
+            }
+        }
+        .in__left{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 1rem;
+            h5{
+                font-family: $fontBebas;
+                font-weight: 300;
+                font-size: 1.6rem;
+                color: rgb(92, 91, 91);
+                letter-spacing: 1px;
+            }
+            h3{
+                font-family: $fontAlfa;
+                font-size: 2rem;
+                color: $maincolor;
+            }
+            p{
+                font-family: $fontLato;
+                color: rgb(92, 91, 91);
+                font-size: 1.1rem;
+                width: 100%;
+            }
+        }
+    }
+}

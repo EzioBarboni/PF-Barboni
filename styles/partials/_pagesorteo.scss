@@ -1,0 +1,48 @@
+.form-registro{
+    width: 500px;
+    background: $secondarycolor;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 4px;
+    border: 1px solid $maincolor;
+    font-family: $fontPoppins;
+    box-shadow: 10px 15px 10px $maincolor;
+    display: flex;
+    flex-direction: column;
+    h2{
+        font-size: 22px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: $maincolor;
+    }
+    p{
+        color:  $secondarycolor2;
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    label{
+        color: $secondarycolor2;
+    }
+    .controls{
+        width: 100%;
+        background: lightgrey;
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 16px;
+        border: 1px solid $maincolor;
+        font-size: 18px;
+    }
+    .boton{
+        width: max-content;
+        background-color: $maincolor;
+        border: 1px solid  $secondarycolor2;
+        padding: 12px;
+        color:  $secondarycolor2;
+        margin: 16px 0;
+        font-size: 16px;
+    }
+}
+

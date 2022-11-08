@@ -1,0 +1,129 @@
+.hero{
+    background-image: linear-gradient(to bottom, $secondarycolor 0%, $maincolor 2000%);
+    color: $secondarycolor2;
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    grid-template-areas:
+    "nav"
+    "content";
+    min-height: 100pv;
+    nav{
+        background: $secondarycolor;
+        height: 100px; 
+        width: 100%;  
+        #check{
+            display: none;
+        }
+        .checkbtn{
+            font-size: 30px;
+            color: $maincolor;
+            float:right;
+            line-height: 80px;
+            margin-right: 40px;
+                cursor: pointer;
+            display: none;
+        }
+        .logo{
+            color: $maincolor;
+            position: absolute;
+            padding: 25px 40px;
+            line-height: 40px;
+            margin: 5px 10px;
+            font-family: $fontBebas;
+            font-size: 40px;
+            text-decoration: none;
+        }
+    }
+        ul{
+            float: right;
+            margin-right: 90px;
+            .menu__item.active a{
+                text-decoration: underline double;
+            }
+            li{
+                display: inline-block;
+                line-height: 80px;
+                margin: 12px 3px;
+                a .activo, a:hover{
+                    background:  rgb(100, 99, 99);
+                    color: $maincolor;
+                    transition: all 400ms ease;
+                }
+                a{
+                    color: $maincolor;
+                    font-size: 18px;
+                    padding: 5px 7px;
+                    border-radius: 3px;
+                    text-transform: capitalize;
+                    text-decoration: none;
+                    font-family:'Bebas Neue', cursive;
+                }
+            }
+        }
+
+    .hero__main{
+        grid-area: content;
+        display: grid;
+        gap: 2em;
+        grid-template-columns: 1fr 1fr;
+        padding-bottom: 110px;
+        align-items: center;
+        margin-top: 20px;
+        width: 90%;
+        margin: 0 auto;
+        overflow: hidden;
+        .hero__texts{
+            h4{
+                font-family: $fontBebas;
+                font-weight: 300;
+                font-size: 1.2rem;
+                border: 1px dashed $maincolor;
+                width: max-content;
+                padding: .6rem;
+                padding-bottom: .4rem;
+            }
+            .hero__title{
+                font-size: 5rem;
+                letter-spacing: 2px;
+                font-family: $fontAlfa;
+                line-height: 1;
+                text-shadow: 6px 6px 0$maincolor;
+            }
+            .hero__title2{
+                font-size: 3rem;
+                font-family: $fontAlfa;
+                text-shadow: 6px 6px 0 $maincolor;
+                margin-bottom: 1.5rem;
+            }
+            .hero__cta{
+                text-decoration: none;
+                color: $secondarycolor2;
+                padding: 5px 20px;
+                border: 1px solid;
+                border-radius: 6px;
+                display: inline-block;
+                font-weight: 500;
+                transition: background-color .3s;
+                &:hover{
+                    background-color:  $hovercolor;
+                    color: $maincolor;
+                }
+            }
+        }
+        .hero__picture{
+            .hero__img{
+                width: 100%;
+                padding-block: 2rem;
+            }
+        }
+    }
+    .hero__waves{
+        grid-area: content;
+        align-self: end; 
+        margin-top: 0;
+    }
+}
+
+
+
+

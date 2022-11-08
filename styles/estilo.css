@@ -1,0 +1,803 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Lato&family=Poppins&display=swap");
+/* Fuentes */
+/* Colores */
+* {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+*::-moz-selection {
+  background-color: black;
+  color: #D4AF37;
+}
+*::selection {
+  background-color: black;
+  color: #D4AF37;
+}
+
+.hero {
+  background-image: linear-gradient(to bottom, black 0%, #D4AF37 2000%);
+  color: azure;
+  display: grid;
+  grid-template-rows: -webkit-max-content 1fr;
+  grid-template-rows: max-content 1fr;
+  grid-template-areas: "nav" "content";
+  min-height: 100pv;
+}
+.hero nav {
+  background: black;
+  height: 100px;
+  width: 100%;
+}
+.hero nav #check {
+  display: none;
+}
+.hero nav .checkbtn {
+  font-size: 30px;
+  color: #D4AF37;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+.hero nav .logo {
+  color: #D4AF37;
+  position: absolute;
+  padding: 25px 40px;
+  line-height: 40px;
+  margin: 5px 10px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 40px;
+  text-decoration: none;
+}
+.hero ul {
+  float: right;
+  margin-right: 90px;
+}
+.hero ul .menu__item.active a {
+  -webkit-text-decoration: underline double;
+          text-decoration: underline double;
+}
+.hero ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 12px 3px;
+}
+.hero ul li a .activo, .hero ul li a:hover {
+  background: rgb(100, 99, 99);
+  color: #D4AF37;
+  transition: all 400ms ease;
+}
+.hero ul li a {
+  color: #D4AF37;
+  font-size: 18px;
+  padding: 5px 7px;
+  border-radius: 3px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-family: "Bebas Neue", cursive;
+}
+.hero .hero__main {
+  grid-area: content;
+  display: grid;
+  gap: 2em;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 110px;
+  align-items: center;
+  margin-top: 20px;
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.hero .hero__main .hero__texts h4 {
+  font-family: "Bebas Neue", cursive;
+  font-weight: 300;
+  font-size: 1.2rem;
+  border: 1px dashed #D4AF37;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0.6rem;
+  padding-bottom: 0.4rem;
+}
+.hero .hero__main .hero__texts .hero__title {
+  font-size: 5rem;
+  letter-spacing: 2px;
+  font-family: "Alfa Slab One", cursive;
+  line-height: 1;
+  text-shadow: 6px 6px 0 #D4AF37;
+}
+.hero .hero__main .hero__texts .hero__title2 {
+  font-size: 3rem;
+  font-family: "Alfa Slab One", cursive;
+  text-shadow: 6px 6px 0 #D4AF37;
+  margin-bottom: 1.5rem;
+}
+.hero .hero__main .hero__texts .hero__cta {
+  text-decoration: none;
+  color: azure;
+  padding: 5px 20px;
+  border: 1px solid;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+.hero .hero__main .hero__texts .hero__cta:hover {
+  background-color: rgb(100, 99, 99);
+  color: #D4AF37;
+}
+.hero .hero__main .hero__picture .hero__img {
+  width: 100%;
+  padding-block: 2rem;
+}
+.hero .hero__waves {
+  grid-area: content;
+  align-self: end;
+  margin-top: 0;
+}
+
+.reservacion {
+  padding: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+.reservacion .reservacion__heading h5 {
+  font-family: "Bebas Neue", cursive;
+  font-weight: 300;
+  font-size: 1.6rem;
+  color: rgb(92, 91, 91);
+  letter-spacing: 1px;
+  text-align: center;
+}
+.reservacion .reservacion__heading h4 {
+  font-family: "Alfa Slab One", cursive;
+  font-size: 2rem;
+  color: #D4AF37;
+}
+.reservacion .reservacion__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "nombre            email" "dia               hora" "cant_personas     buttom";
+  width: 36rem;
+  gap: 1rem;
+}
+.reservacion .reservacion__form input {
+  padding: 0.75rem 1rem;
+  font-family: "Bebas Neue", cursive;
+  font-weight: 300;
+  color: black;
+}
+.reservacion .reservacion__form .nombre {
+  grid-area: nombre;
+}
+.reservacion .reservacion__form .email {
+  grid-area: email;
+}
+.reservacion .reservacion__form .dia {
+  grid-area: dia;
+}
+.reservacion .reservacion__form .hora {
+  grid-area: hora;
+}
+.reservacion .reservacion__form .cant_personas {
+  grid-area: cant_personas;
+}
+.reservacion .reservacion__form .buttom {
+  grid-area: buttom;
+  border: 0;
+  background-color: #D4AF37;
+  font-family: "Alfa Slab One", cursive;
+  text-transform: uppercase;
+  color: black;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.grid {
+  padding: 6rem;
+  padding-top: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "item1  item2" "item1  item3";
+  gap: 2rem;
+}
+.grid .grid__item {
+  border-radius: 1rem;
+  border: 1px solid #D4AF37;
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  font-family: "Bebas Neue", cursive;
+  padding: 2rem;
+}
+.grid .grid__item h5 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.2rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 3px;
+  color: #D4AF37;
+  border-radius: 5px;
+}
+.grid .grid__item h4 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.6rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 4px;
+  padding-bottom: 0.5px;
+  border-radius: 5px;
+}
+.grid .grid__item1 {
+  grid-area: item1;
+  background-image: url("../Imagenes/Menufoto1.jpg");
+  height: 400px;
+}
+.grid .grid__item2 {
+  grid-area: item2;
+  background-image: url("../Imagenes/Menufoto2.jpg");
+}
+.grid .grid__item3 {
+  grid-area: item3;
+  background-image: url("../Imagenes/Menufoto3.jpg");
+}
+
+.elige {
+  padding: 6rem;
+  padding-top: 0.5rem;
+  padding-bottom: 3rem;
+}
+.elige .titlemenu {
+  text-align: center;
+  padding-inline: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.elige .titlemenu h4 {
+  font-family: "Bebas Neue", cursive;
+  font-weight: 300;
+  background-color: #D4AF37;
+  padding: 0.5rem 1rem 0.25rem 1rem;
+}
+.elige .titlemenu h2 {
+  font-family: "Alfa Slab One", cursive;
+  color: white;
+}
+.elige .titlemenu p {
+  font-family: "Lato", sans-serif;
+  color: white;
+}
+.elige .titlemenuhamburguesas h4 {
+  font-family: "Bebas Neue", cursive;
+  font-weight: 300;
+  background-color: #D4AF37;
+  padding: 0.25rem 0.5rem 0.125rem 0.5rem;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+.elige .cards {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+.elige .cards .card {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: black;
+  border: 1px solid #D4AF37;
+}
+.elige .cards .card img {
+  max-width: 100%;
+  padding: 20px;
+}
+.elige .cards .card h4 {
+  font-family: "Bebas Neue", cursive;
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: #D4AF37;
+}
+.elige .cards .card p {
+  font-family: "Lato", sans-serif;
+  width: 75%;
+  text-align: center;
+  color: azure;
+}
+.elige .cards .card a {
+  font-family: "Alfa Slab One", cursive;
+  font-size: 1rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: #D4AF37;
+}
+
+.events {
+  padding: 6rem;
+  padding-top: 0;
+  background-color: black;
+}
+.events .in {
+  display: flex;
+  border: 1px solid #D4AF37;
+  border-radius: 10px;
+  box-shadow: 15px 15px 30px rgb(102, 102, 102);
+}
+.events .in .in__right {
+  min-width: 0;
+  padding: 1rem;
+}
+.events .in .in__right img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+.events .in .in__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+.events .in .in__left h5 {
+  font-family: "Bebas Neue", cursive;
+  font-weight: 300;
+  font-size: 1.6rem;
+  color: rgb(92, 91, 91);
+  letter-spacing: 1px;
+}
+.events .in .in__left h3 {
+  font-family: "Alfa Slab One", cursive;
+  font-size: 2rem;
+  color: #D4AF37;
+}
+.events .in .in__left p {
+  font-family: "Lato", sans-serif;
+  color: rgb(92, 91, 91);
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+.containerx .divtituloeventos {
+  margin: 3rem;
+  text-align: center;
+}
+.containerx .divtituloeventos .titulosdeeventos {
+  color: #D4AF37;
+  font-family: "Alfa Slab One", cursive;
+  margin-bottom: 50px;
+}
+.containerx .CardsP {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  grid-gap: 2rem;
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  margin-top: 4rem;
+}
+.containerx .CardsP .CardP {
+  display: block;
+  overflow: hidden;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: 0.2s;
+  position: relative;
+}
+.containerx .CardsP .CardP .img-box img {
+  display: block;
+  width: 100%;
+  height: 30rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.containerx .CardsP .CardP .Card-content {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  color: #fff;
+  width: 100%;
+  height: 20%;
+  padding: 2.2rem 0;
+  overflow: hidden;
+  transition: 0.7s;
+}
+.containerx .CardsP .CardP .Card-content h3 {
+  font-weight: 500;
+  text-transform: capitalize;
+  font-family: "Bebas Neue", cursive;
+}
+.containerx .CardsP .CardP .Card-content p {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+  padding: 1.2rem;
+}
+.containerx .CardsP .CardP .Card-content:hover {
+  height: 45%;
+  transition: 0.7s;
+}
+
+.sobre__nosotros {
+  display: flex;
+  margin: 50px auto;
+  margin-top: 65px;
+  margin-bottom: 65px;
+  width: 85%;
+  gap: 25px;
+  border: 1px solid #D4AF37;
+  border-radius: 10px;
+  padding: 40px;
+}
+.sobre__nosotros .parte__izquierda {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.sobre__nosotros .parte__izquierda h2 {
+  color: #D4AF37;
+  font-family: "Alfa Slab One", cursive;
+  margin-bottom: 50px;
+}
+.sobre__nosotros .parte__izquierda h4 {
+  color: azure;
+  font-family: "Bebas Neue", cursive;
+}
+.sobre__nosotros .parte__izquierda p {
+  color: azure;
+  display: flex;
+  text-align: center;
+}
+.sobre__nosotros .parte__izquierda p .texto1__sobrenosotros {
+  margin-bottom: 50px;
+}
+.sobre__nosotros .parte__derecha {
+  width: 50%;
+}
+
+.form-registro {
+  width: 500px;
+  background: black;
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border-radius: 4px;
+  border: 1px solid #D4AF37;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 10px 15px 10px #D4AF37;
+  display: flex;
+  flex-direction: column;
+}
+.form-registro h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #D4AF37;
+}
+.form-registro p {
+  color: azure;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.form-registro label {
+  color: azure;
+}
+.form-registro .controls {
+  width: 100%;
+  background: lightgrey;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #D4AF37;
+  font-size: 18px;
+}
+.form-registro .boton {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: #D4AF37;
+  border: 1px solid azure;
+  padding: 12px;
+  color: azure;
+  margin: 16px 0;
+  font-size: 16px;
+}
+
+.piedepagina {
+  background-color: black;
+  text-align: center;
+  margin-top: 0px;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 0.5rem 100rem rgba(0, 0, 0, 0.9);
+}
+.piedepagina .grupo1 {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 70px;
+  padding: 10px 0px;
+  align-items: center;
+}
+.piedepagina .grupo1 .box figure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.piedepagina .grupo1 .box figure img {
+  width: 250px;
+}
+.piedepagina .grupo1 .box h2 {
+  color: azure;
+  margin-bottom: 25px;
+  font-size: 20px;
+  font-family: "Bebas Neue", cursive;
+}
+.piedepagina .grupo1 .box p {
+  color: azure;
+  margin-bottom: 0px;
+  font-family: "Lato", sans-serif;
+}
+.piedepagina .grupo1 .box .redsocial a {
+  text-decoration: none;
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #D4AF37;
+  border-radius: 6px;
+  margin-right: 10px;
+  background-color: rgb(27, 24, 24);
+  text-align: center;
+  transition: all 300ms ease;
+}
+.piedepagina .grupo1 .box .redsocial a:hover {
+  color: azure;
+}
+.piedepagina .grupo2 {
+  background-color: #D4AF37;
+  padding: 10px 10px;
+  text-align: center;
+  color: rgb(10, 10, 10);
+}
+.piedepagina .grupo2 small {
+  font-size: 15px;
+}
+
+@media (max-width: 767px) {
+  /* Menú */
+  .hero nav {
+    background: black;
+    height: 100px;
+    width: 100%;
+  }
+  .hero nav #check:checked ~ ul {
+    left: 0;
+  }
+  .hero nav .checkbtn {
+    display: block;
+    margin-top: 9.5px;
+  }
+  .hero nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgb(0, 0, 0);
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  .hero nav ul .menu__item.active a {
+    -webkit-text-decoration: underline double;
+            text-decoration: underline double;
+  }
+  .hero nav ul li {
+    display: block;
+    margin: 35px 0;
+    line-height: 30px;
+  }
+  .hero nav ul li a .activo, .hero nav ul li a:hover {
+    background: none;
+    color: azure;
+  }
+  .hero nav ul li a {
+    font-size: 20px;
+  }
+  .hero .hero__main {
+    grid-template-columns: 1fr;
+    grid-template-rows: -webkit-max-content -webkit-max-content;
+    grid-template-rows: max-content max-content;
+    text-align: center;
+  }
+  .hero .hero__main .hero__texts h4 {
+    border: 1px dashed black;
+    width: 100%;
+  }
+  .hero .hero__main .hero__picture {
+    grid-row: 1/2;
+  }
+  .hero .hero__main .hero__picture .hero__img {
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+  }
+  .hero .hero__main .hero__waves {
+    grid-area: content;
+    align-self: end;
+    margin-top: 0;
+  }
+  /* Menú del bar*/
+  .reservacion {
+    padding: 3rem;
+    padding-top: 4rem;
+  }
+  .reservacion .reservacion__form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3rem;
+  }
+  .grid {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+  }
+  .grid .grid__item {
+    flex: 1;
+  }
+  .grid .grid__item1 {
+    padding-bottom: 6rem;
+  }
+  .elige {
+    padding-inline: 0;
+  }
+  .elige .titlemenu {
+    padding-inline: 0;
+  }
+  .elige .titlemenu p {
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+  .elige .cards {
+    flex-direction: column;
+    padding: 3rem;
+    padding-bottom: 0;
+    width: auto;
+  }
+  .events {
+    padding: 2rem;
+    padding-top: 0;
+  }
+  .events .in {
+    flex-direction: column;
+    text-align: center;
+    box-shadow: none;
+  }
+  /* Página Eventos*/
+  .containerx .CardsP {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  /* Página Sobre Nosotros*/
+  .sobre__nosotros {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .sobre__nosotros .parte__izquierda {
+    width: auto;
+  }
+  .sobre__nosotros .parte__derecha {
+    width: auto;
+  }
+  /* Página Sorteo*/
+  .form-registro {
+    width: 85%;
+    margin-top: 90px;
+  }
+  /* Pie de Pagina*/
+  .piedepagina .grupo1 {
+    grid-template-columns: 1fr;
+    grid-template-rows: -webkit-max-content -webkit-max-content;
+    grid-template-rows: max-content max-content;
+    text-align: center;
+  }
+  .piedepagina .grupo1 .box p {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 950px) {
+  /* Menú */
+  .hero nav ul {
+    margin-right: 20px;
+  }
+  .hero nav ul li a {
+    font-size: 18px;
+  }
+  /* Home */
+  .hero .hero__main {
+    grid-template-columns: 1fr;
+    grid-template-rows: -webkit-max-content -webkit-max-content;
+    grid-template-rows: max-content max-content;
+    text-align: center;
+  }
+  .hero .hero__main .hero__texts h4 {
+    border: 1px dashed black;
+    width: 100%;
+  }
+  .hero .hero__main .hero__picture {
+    grid-row: 1/2;
+  }
+  .hero .hero__main .hero__picture .hero__img {
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+  }
+  .hero .hero__main .hero__waves {
+    grid-area: content;
+    align-self: end;
+    margin-top: 0;
+  }
+  /* Menú del bar*/
+  .grid {
+    grid-template-areas: "item1  item1" "item2  item3";
+  }
+  /* Página Eventos*/
+  .containerx .CardsP {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  /* Página Sobre Nosotros*/
+  .sobre__nosotros {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .sobre__nosotros .parte__izquierda {
+    width: auto;
+  }
+  .sobre__nosotros .parte__derecha {
+    width: auto;
+  }
+  /* Pie de pagina */
+  .piedepagina .grupo1 {
+    grid-template-columns: 1fr;
+    grid-template-rows: -webkit-max-content;
+    grid-template-rows: max-content;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .piedepagina .grupo1 .box #imagenfooter {
+    display: none;
+  }
+}/*# sourceMappingURL=estilo.css.map */

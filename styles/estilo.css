@@ -707,6 +707,10 @@
   .containerx .CardsP {
     grid-template-columns: repeat(1, 1fr);
   }
+  .containerx .CardsP .CardP .Card-content:hover {
+    height: 60%;
+    transition: 0.7s;
+  }
   /* Página Sobre Nosotros*/
   .sobre__nosotros {
     display: flex;

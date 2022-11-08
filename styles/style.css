@@ -718,6 +718,10 @@ li a .activo, li a:hover{
     .CardsP{
         grid-template-columns: repeat(1,1fr);
     }
+    .Card-content:hover{
+        height: 60%;
+        transition: 0.7s;
+    }
 
     /* Página Sobre Nosotros*/
 
